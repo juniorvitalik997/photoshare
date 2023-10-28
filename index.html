@@ -8,9 +8,26 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css' integrity='sha512-KOWhIs2d8WrPgR4lTaFgxI35LLOp5PRki/DxQvb7mlP29YZ5iJ5v8tiLWF7JLk5nDBlgPP1gHzw96cZ77oD7zQ==' crossorigin='anonymous'/><link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="preloader">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+    <div class="navBurger">
+        <h3 class="logo">Levi Studio</h3>
+        <i id="burger" class="fa-solid fa-bars"></i>
+        <i id="exit" class="fa-solid fa-xmark"></i>
+    </div>
     <div class="wrap">
+        
+        <div class="notificationPopup">
+              
+        </div>
+        
         <!-- Home Page -->
         <div class="homePage">
             <div class="navBar">
@@ -27,17 +44,19 @@
                     <div class="navItem">Фотокниги</div>
                     <div class="navItem">Про мене</div>
                     <div class="navItem">Відгуки</div>
-                    <div class="navItem">Контаки</div>
+                    <div id="contactItem" class="navItem">Контаки</div>
                 </div>
-                
+
+                <a class="telegram" href="https://t.me/VitalikShutiak"><i class="fa-brands fa-telegram"></i>Звязатись</a>
             </div>
+            
             <div class="homePageContainer">
                 <div class="sliderContainer">
 
                     <div class="sliderControl">
-                        <i class="fa-solid fa-angle-left"></i>
+                        <i id="prewPhoto" class="fa-solid fa-angle-left"></i>
                         <div class="currentSlide">1</div>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <i id="nextPhoto" class="fa-solid fa-angle-right"></i>
                     </div>
                 </div>
                 <footer>
@@ -50,16 +69,72 @@
                         </div>
                     </div>
                     <div class="footerSocial">
-                        <div class="socialItem"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+                        <div class="socialItem"><a href="https://www.instagram.com/_marusyaa_vantsura_/"><i class="fa-brands fa-instagram"></i></a></div>
                         <div class="socialItem"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></div>
                     </div>
                 </footer>
+                
+            </div>
+            <div class="contactPage">
+                <h4>Контакти</h4>
+                <p>
+                    Я завжди відкрита до нових пропозицій, співпраці і конструктивної критики.Не стидайтесь <br>
+                    писати мені ,я дуже ціную зворотній звязок із своїми клієнтами.
+                </p>
+                <div class="inputContainer">
+                    <div class="emailContainer">
+                        <form class="myForm" id="my-form" action="https://formspree.io/f/moqorvel" method="POST">
+                        <div class="nameContainer">
+                        
+                            <h6>EMAIL</h6>
+                        <h5>maria@icloud.com</h5>
+                        <input class="inputName"  type="text" name="name" placeholder="Імя" id="name">
+                        <br>
+                        <input class="inputEmail"  type="email" name="email" placeholder="E-mail" id="email">
+                        <br>
+                        <button class="sentBtn" id="sentBtn">Відправити</button>
+                        </div>
+                        
+
+                        <div class="socialContainer">
+                            <h6>СОЦ.МЕРЕЖІ</h6>
+                            
+                                <a href="https://www.instagram.com/_marusyaa_vantsura_/">ig.</a>
+                                <a href="#">fb.</a>
+                            
+                            
+                            <textarea name="message"  placeholder="Повідомлення"></textarea>
+                        </div>
+                     </form>
+                    </div>
+                   
+                    
+                </div>
+                <footer>
+                    <div class="footerAuthor">
+                        <div class="autorItem">
+                            Всі права захищено &copy;<span class="currentYear">2023</span>
+                        </div>
+                        <div class="autorItem">
+                            Фото - Mariia Vantsura
+                        </div>
+                    </div>
+                    <div class="footerSocial">
+                        <div class="socialItem"><a href="https://www.instagram.com/_marusyaa_vantsura_/"><i class="fa-brands fa-instagram"></i></a></div>
+                        <div class="socialItem"><a href="#"><i class="fa-brands fa-square-facebook"></i></a></div>
+                    </div>
+                </footer>
+            </div>
+            
+
             </div>
         </div>
         <!-- Home Page End -->
     </div>
 
 
-    <script src="./main.js"></script>
+    <script src="./main.js">
+
+    </script>
 </body>
 </html>
