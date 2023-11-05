@@ -118,24 +118,9 @@ $('#prewPhoto').click(function(){
     }
     $('.currentSlide').text(currentPhoto)
 })
-$('#burger').click(function(){
-  $('.navBar').slideToggle(500);        
-  $('.navBar').css('witdh','100%');
-  $('.navBar').css('height','100vh');
-  $('#exit').css('margin-left','95%');
-  $('.sliderContainer').css('display','none');
-  $('footer').css('display','none');
-  $('#burger').css('display','none');
-  $('#exit').css('display','flex')
-  $('#exit').css('position','fixed')
-})
-$('#exit').click(function(){
-  $('.navBar').hide(0)
-  $('#burger').css('display','flex');
-  $('#exit').css('display','none')
-  $('.sliderContainer').css('display','flex');
-  $('footer').css('display','flex');
-})
+
+
+
 // $('#portret').click(function(){
 //   $('.portretContainer').empty();
 //   $('.sliderContainer').css('display','none')
@@ -156,7 +141,6 @@ let categoryExplaine = {
 $('.navItem').click(function(e){
   let category = e.target.id;
   $('.portretContainer').empty();
-console.log(category)
   $('.sliderContainer').css('display','none')
   $('.portretContainer').css('display','flex')
   $('.portretHeaderContainer').text(`${categoryExplaine[`${category}`]}`)
@@ -181,4 +165,47 @@ console.log(category)
         }
       }
   })
+$('.navBar').css('left','-20%')
+$('.homePageContainer').css('width','100%')
+$('.homePageContainer').css('left','0')
+})
+let menuOpen = true;
+$('.menu').click(function(){
+  let screenWidth = ($('.wrap').css('width')).slice(0,($('.wrap').css('width')).indexOf('px'))
+
+  console.log(screenWidth)
+  if(screenWidth>1200){
+    if(menuOpen == true){
+      $('.navBar').css('left','-20%')
+      $('.homePage').css('width','100%')
+      $('.homePage').css('left','0')
+      $('.menu').css('left','0')
+      menuOpen = false;
+    }
+    else if(menuOpen == false){
+      $('.navBar').css('left','0')
+      $('.homePage').css('width','100%')
+      $('.homePage').css('left','20%')
+      $('.menu').css('left','20%')
+      menuOpen = true
+    }
+  }else{
+    if(menuOpen == true){
+      $('.homePage').css('width','100%')
+      $('.homePage').css('left','0')
+      $('.homePageContainer').css('display','flex')
+      $('.navBar').css('left','-20%')
+      $('.menu').css('left','0')
+      menuOpen = false;
+    }else if(menuOpen == false){
+      $('.homePageContainer').css('display','none')
+      $('.navBar').css('width','80%')
+      $('.navBar').css('left','0')
+      $('.menu').css('left','80%')
+      menuOpen = true
+    }
+    
+  }
+ 
+  
 })

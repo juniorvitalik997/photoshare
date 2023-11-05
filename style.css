@@ -44,11 +44,16 @@
 .wrap{
     width: 100%;
     min-height: 100vh;
+    background-color: #999;
 }
 .homePage{
-    width: 100%;
+    width: 80%;
     min-height: 100vh;
     display: flex;
+    background-color: orange;
+    left: 20%;
+    position: relative;
+    transition: 1s;
 }
 .navBar{
     width: 20%;
@@ -58,6 +63,8 @@
     left: 0;
     background-color: #fff;
     padding: 50px 0 50px 40px;
+    transition: 1s;
+    background-color: blue;
 }
 .nav{
     margin-top: 140px;
@@ -82,12 +89,13 @@
     transition: .1s;
 }
 .homePageContainer{
-    width:80%;
+    width:100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    left: 20%;
+    transition: 1s;
+    z-index: 90;
+    background-color: aqua;
 }
 .sliderContainer{
     width: 100%;
@@ -99,13 +107,16 @@
     background-size: cover;
     background-image: url('./img/1.JPG');
     transition: 1s;
+    position: relative;
+    margin-top: -50px;
 }
 .portretContainer{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: none;
     flex-wrap: wrap;
-    flex-direction: column;
+    background-color: orange;
+    transition: 1s;
 }
 /* .portretPhotoContainer{
     width: 100%;
@@ -232,10 +243,6 @@ footer{
 .socialContainer{
     width: 50%;
     height: 500px;
-    
-}
-.socialContainer a{
-   
 }
 .inputContainer{
     width: 100%;
@@ -323,23 +330,6 @@ textarea{
     margin-right: 10px;
     
 }
-.navBurger{
-    width: 100%;
-    height: 100px;
-    display: none;
-    z-index: 100;
-    align-items: center;
-    font-size: 30px;
-
-} 
-.navBurger i{
-    margin-left: 75%;
-}
-#exit{
-    margin-left: 75%;
-    font-size: 30px;
-    display: none;
-}
 .photosesionItem{
     width: 400px;
     height: 400px;
@@ -347,11 +337,28 @@ textarea{
     border-radius: 10px;
     background-size: cover;
     background-position: center;
-    
+    flex-wrap: wrap;
 }
 .fotosesionPhoto{
     width: 400px;
     margin:20px;
+}
+.menu{
+    width: 50px;
+    background-color: #000;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    position: fixed;
+    left: 20%;
+    margin-left: 30px;
+    top:40px;
+    z-index: 99;
+    transition: 1s;
 }
 @media screen and (max-width: 900px) {
     .navBar{
@@ -390,4 +397,33 @@ textarea{
         display: flex;
     }
     
+}
+@media screen and (max-width: 428px){
+    .navBurger{
+    width: 428px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    }
+    .homePage{
+        width: 428px;
+    }
+    .navBurger i{
+        margin-left: 53%;
+    }
+    .navBar{
+        display: flex;
+    }
+    #exit{
+        margin-top: 40px;
+        z-index: 100;
+    }
+    .telegram{
+        width: 40%;
+    }
+    .logo{
+        position: relative;
+        z-index: 20;
+    }
 }
